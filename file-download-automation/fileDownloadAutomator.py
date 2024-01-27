@@ -50,17 +50,17 @@ def move_file(dest, entry, name):
     move(entry, dest)
 
 
-class MoverHandler(FileSystemEventHandler):
+# class MoverHandler(FileSystemEventHandler):
     # ? THIS FUNCTION WILL RUN WHENEVER THERE IS A CHANGE IN "source_dir"
     # ? .upper is for not missing out on files with uppercase extensions
-    def on_modified(self, event):
-        with scandir(source_dir) as entries:
-            for entry in entries:
-                name = entry.name
-                self.check_audio_files(entry, name)
-                self.check_video_files(entry, name)
-                self.check_image_files(entry, name)
-                self.check_document_files(entry, name)
+    # def on_modified(self, event):
+    #     with scandir(source_dir) as entries:
+    #         for entry in entries:
+    #             name = entry.name
+    #             self.check_audio_files(entry, name)
+    #             self.check_video_files(entry, name)
+    #             self.check_image_files(entry, name)
+    #             self.check_document_files(entry, name)
 
     def check_audio_files(self, entry, name):  # * Checks all Audio Files
         for audio_extension in audio_extensions:
