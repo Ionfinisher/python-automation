@@ -87,7 +87,7 @@ def move_file(dest, entry, name):
     def check_document_files(self, entry, name):  # * Checks all Document Files
         for documents_extension in document_extensions:
             if name.endswith(documents_extension) or name.endswith(documents_extension.upper()):
-                move_file(dest_dir_documents, entry, name)
+                # move_file(dest_dir_documents, entry, name)
                 logging.info(f"Moved document file: {name}")
 
 
