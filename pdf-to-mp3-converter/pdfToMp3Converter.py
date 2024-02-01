@@ -1,6 +1,6 @@
 # Here are the packages used to read and convert pdf to mp3:
-# import pyttsx3
-# import PyPDF2
+import pyttsx3
+import PyPDF2
 
 
 pdfReader = PyPDF2.PdfFileReader(open('sample.pdf', 'rb'))
