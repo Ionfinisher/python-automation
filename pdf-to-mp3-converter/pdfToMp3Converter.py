@@ -2,13 +2,15 @@
 import pyttsx3
 import PyPDF2
 
+source_file_name = ""
+output_fine_name = ""
 
-pdfReader = PyPDF2.PdfFileReader(open('sample.pdf', 'rb'))
+pdfReader = PyPDF2.PdfFileReader(open(source_file_name, 'rb'))
 speaker = pyttsx3.init()
 for pageNumber in range(pdfReader.numPages):
     text = pdfReader.getPage(pageNumber).extractText()
     cleanText = text.strip().replace('\n', ' ')
-    speaker.save_to_file(cleanText, 'story.mp3')
+    speaker.save_to_file(cleanText, output_fine_name+".mp3")
     speaker.runAndWait()
 
 
