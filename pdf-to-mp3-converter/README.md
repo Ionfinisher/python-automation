@@ -8,4 +8,4 @@ All the instructions about personnalization are in the code as comments and are 
 
 # Credits
 
-This is a project initiated by Internet Tiff In Tech on youtube
+This is a project initiated by Tiff In Tech on youtube
